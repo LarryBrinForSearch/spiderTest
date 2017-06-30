@@ -42,27 +42,7 @@ class SpiderMain(object):
 				break
 			
 			new_url=self.urls.get_new_url()	
-		'''
-		while new_url is not None:
-			print 'craw %d : %s'% (count,new_url)
-				
-			html_cont=self.downloader.download(new_url)
-				
-			#得到新的要爬取的URL
-			new_urls,new_data=self.parser.parse(new_url, html_cont)
-				
-			self.urls.add_new_urls(new_urls)
-			#self.outputer.collect_data(new_data)
-			self.outputer.output_html(new_url, html_cont)
-			print 'sss'
-			
-			count=count+1
-			if count==20:
-				self.urls.close_db()
-				break
-			
-			new_url=self.urls.get_new_url()	
-		'''
+		
 if __name__=="__main__":
 	root_url = "http://www.baidu.com"
 	obj_spider = SpiderMain()

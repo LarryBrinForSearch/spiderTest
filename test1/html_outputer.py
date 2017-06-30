@@ -1,8 +1,8 @@
 #coding:utf-8
+count=2
 class HtmlOutputer(object):
     def __init__(self):
         self.datas=[]
-        self.count=1
     
     def collect_data(self,data):
         if data is None:
@@ -10,13 +10,13 @@ class HtmlOutputer(object):
         self.datas.append(data)
     
     def output_html(self,page_url,url_cont):
-        filename=str(self.count)+'.txt'
+        filename=count+'.html'
         print filename
         fout=open(filename,'w')
         fout.write(url_cont)
         fout.close()
         
-        self.count=self.count+1
+        count=count+1
         '''
         fout.write("<html>")
         fout.write("<body>")
