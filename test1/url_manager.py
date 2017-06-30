@@ -14,7 +14,7 @@ class UrlManager(object):
 		if url is None:
 			return
 		if not self.old_urls.has_key(url.encode('utf-8')):
-			self.new_urls.append(url)
+			self.new_urls.append(url.encode('utf-8'))
 	
 	def add_new_urls(self,urls):
 		if urls is None or len(urls)==0:
